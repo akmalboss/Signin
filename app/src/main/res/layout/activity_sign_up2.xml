@@ -45,6 +45,7 @@
             android:background="@drawable/rounded_corner"
             android:hint="Email Address"
             android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
             android:padding="8dp"
             android:textSize="25sp" />
 
@@ -67,7 +68,7 @@
             android:progress="33" />
 
         <Button
-            android:id="@+id/nextBtn"
+            android:id="@+id/nextBtn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

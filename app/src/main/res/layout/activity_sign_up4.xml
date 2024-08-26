@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/signup3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signup4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="20dp"
@@ -32,40 +33,72 @@
             android:id="@+id/nametextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
-            android:text="Create a Password"
+            android:text="Verify OTP"
             android:textSize="25sp"
+            android:layout_gravity="center"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/nameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:hint="Password"
-            android:layout_marginTop="10dp"
-            android:padding="8dp"
-            android:textSize="25sp" />
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/vertextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Please enter the code we sent you to email"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
 
-            <TextView
-                android:id="@+id/txtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="35dp"
-                android:text="Show Password"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+
+
+
+
+        <com.otpview.OTPTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            app:otp_text_size="20dp"
+            app:bar_enabled="true"
+            app:bar_error_color="@color/red"
+            app:bar_active_color="@color/black"
+            app:bar_inactive_color="@android:color/darker_gray"
+            app:hide_otp_drawable="@drawable/bg_otp_box_hide"
+            app:bar_success_color="#33cc33"
+            app:bar_margin_bottom="0dp"
+            app:bar_margin_left="2dp"
+            app:bar_margin_right="2dp"
+            app:bar_height="1.5dp"
+            app:box_margin="0dp"
+            app:height="40dp"
+            app:width="40dp"
+            app:hide_otp="true"
+            app:length="4"
+            app:otp=""
+            android:layout_gravity="center"/>
+
+
+
+        <TextView
+            android:id="@+id/ver2textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Didn’t Receive OTP ?"
+            android:textSize="15sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/vert3extView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Resend Code"
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
 
 
         <TextView
@@ -74,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="50dp"
-            android:text="2 of 3"
+            android:text="3 of 3"
             android:textSize="15sp"
             android:layout_marginEnd="15dp"
             android:textStyle="bold" />
@@ -84,10 +117,10 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="66" />
+            android:progress="100" />
 
         <Button
-            android:id="@+id/nextBtn"
+            android:id="@+id/nextBtn4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -97,5 +130,7 @@
             android:textSize="20sp" />
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
